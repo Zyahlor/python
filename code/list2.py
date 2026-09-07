@@ -59,3 +59,11 @@ for i in nhap:
     if dem == 2:
         nguyen_to.append(i)
 print(nguyen_to)
+# sort thủ công (sắp xếp tăng dần bằng thuật toán đổi chỗ)
+# Lỗi cũ: `for i in nhap` trả về giá trị phần tử, không phải chỉ số;
+# vì vậy dùng nhap[i] có thể gây IndexError hoặc truy cập sai phần tử.
+for i in range(len(nhap) - 1):
+    for j in range(i + 1, len(nhap)):
+        if nhap[i] > nhap[j]:
+            nhap[i], nhap[j] = nhap[j], nhap[i]
+print(nhap)
