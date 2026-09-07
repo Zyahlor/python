@@ -178,7 +178,7 @@ for x in a:
 a = (1, 2, 3)
 ```
 
-## Index
+## Index [x]
 ```python
 a[0]     # 1
 a[-1]    # 3
