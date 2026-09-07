@@ -178,12 +178,65 @@ for x in a:
 a = (1, 2, 3)
 ```
 
-Học:
-- Index
-- Slice
-- Duyệt
-- Unpacking
-- Khác biệt giữa `list` và `tuple`
+## Index
+```python
+a[0]     # 1
+a[-1]    # 3
+```
+
+## Slice
+```python
+a[0:2]   # (1, 2)
+a[::-1]  # (3, 2, 1) — đảo ngược
+```
+
+## Duyệt
+```python
+for x in a:
+    print(x)
+
+for i, x in enumerate(a):
+    print(i, x)
+```
+
+## Unpacking
+```python
+x, y, z = a
+x, *rest = a      # x=1, rest=[2,3]
+a1, (b, c) = (1, (2, 3))   # nested unpacking → a1=1, b=2, c=3
+```
+
+## Khác biệt giữa `list` và `tuple`
+| | Tuple | List |
+|---|---|---|
+| Đổi được | ❌ | ✅ |
+| Hashable (làm dict key) | ✅ | ❌ |
+
+## Tuple methods (chỉ có 2)
+```python
+a.count(2)   # 1 — đếm số lần xuất hiện
+a.index(3)   # 2 — vị trí đầu tiên tìm thấy
+```
+
+## ⚠️ Immutable nhưng chứa mutable bên trong
+```python
+t = (1, [2, 3])
+t[1].append(4)   # ✅ chạy được! list bên trong vẫn đổi được
+t          # (1, [2, 3, 4])
+# t[0] = 99  ❌ lỗi — chỉ phần tử gốc của tuple là bất biến
+```
+
+## Tuple 1 phần tử
+```python
+x = (5,)    # ✅ tuple
+y = (5)     # ❌ int, không phải tuple
+```
+
+## `tuple()` constructor
+```python
+tuple([1, 2, 3])   # (1, 2, 3)
+tuple("abc")       # ('a', 'b', 'c')
+```
 
 ### Hiểu bản chất
 
