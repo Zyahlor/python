@@ -91,3 +91,47 @@ a[1:4:2]   # (20, 40) — từ 1 đến trước 4, step 2
 + slice luôn trả về tuple mới
 + không lỗi khi out - of - range, tự căts vừa đủ
 + số âm tính từ cuối lên
+## unpacking
+-  gán nhiều biến cùng lcus từ 1 tuple, list, string
+``` python
+a = (1,2,3)
+x,y,z =a # x=1,y=2,z=3
+```
+**chú ý:** số biến bên trái khớp vs số phần tử, nếu ko sẽ lỗi!
+``` python
+x, y = (1, 2, 3)
+# ❌ ValueError: too many values to unpack
+```
+- có thể dùng `*` để gom phần dư
+``` python
+a = (1,2,3,4,5)
+x,*rest = a
+# => a = 1, rest = [2,3,4,5] => rest là list, không còn là tuple
+
+*rest, y =a # => rest =[1,2,3,4], y =5
+
+x,*mid, y=a
+# x=1, mid=[2, 3, 4], y=5
+```
+- `*` chỉ được dùng 1 lần trong 1 lần unpack, *rest hút hết các phần còn lại, kể cả rỗng!
+- lồng unpacking:
+``` python
+a1, (b, c) = (1, (2, 3))
+# a1=1, b=2, c=3
+
+(a, b), (c, d) = (1, 2), (3, 4)
+# a=1, b=2, c=3, d=4
+```
+**chú ý cấu trúc bên trái phải khớp bên phải!**
+
+- bỏ qua giá trị không cần:
+``` python
+x, _, z = (1, 2, 3)  # x =1, y=3
+ # _ là quy ước "tui không dùng cái này"
+```
+**lỗi hay gặp:**
+``` python
+x, y, z = (1, 2)        # ❌ thiếu 1 giá trị
+x, y = (1, 2, 3)        # ❌ thừa 1 giá trị
+x, *y, *z = (1,2,3,4)   # ❌ SyntaxError — 2 dấu * cùng lúc
+```
