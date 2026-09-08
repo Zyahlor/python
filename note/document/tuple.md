@@ -70,3 +70,24 @@ ip = result[0]       # "10.0.0.1"
 port = result[1]     # 80
 status = result[2]   # "open"
 ```
+## slice 
+-  giống như list, cùng cú pháp
+>[start:stop:step]
+``` python
+a = (10, 20, 30, 40, 50)
+
+a[1:3]     # (20, 30)     — index 1 đến trước 3
+a[:3]      # (10, 20, 30) — từ đầu đến trước 3
+a[2:]      # (30, 40, 50) — từ 2 đến hết
+a[:]       # (10, 20, 30, 40, 50) — copy toàn bộ
+
+a[::2]     # (10, 30, 50) — step 2, cách 1 lấy 1
+a[::-1]    # (50, 40, 30, 20, 10) — đảo ngược
+a[::-2]    # (50, 30, 10) — đảo ngược + step 2
+
+a[1:4:2]   # (20, 40) — từ 1 đến trước 4, step 2
+```
+- **điểm quan trọng:**
++ slice luôn trả về tuple mới
++ không lỗi khi out - of - range, tự căts vừa đủ
++ số âm tính từ cuối lên
