@@ -44,7 +44,7 @@ a[-2]  # → 3
 ```python
 a = [1,2,3,4]
 for idx in a:
-    print(x)
+    print(idx)
     # idx = 0 => 1
     # idx = 1 => 2
     # idx = 2 => 3
@@ -60,13 +60,13 @@ a = [1,2,3,4,5]
 
 print(a) # [1,2,3,4,5]
 
-for idx in a:
-    print(idx)
-    # idx  => 1
-    # idx  => 2
-    # idx  => 3
-    # idx  => 4
-    # idx  => 5
+for x in a:
+    print(x)
+    # x  => 1
+    # x  => 2
+    # x  => 3
+    # x  => 4
+    # x  => 5
 ```
 ### 1.2 thêm/xóa/sửa/chèn phần tử
 1. `.append()`
@@ -211,9 +211,9 @@ print(a)   # → [3, 1, 4, 1, 5]  ← không đổi
 sorted(a, reverse=True)   # → [5, 4, 3, 1, 1]
 ```
 
-- **khác biệt** giữa `.sort()` và `.sorted()`
+- **khác biệt** giữa `.sort()` và `sorted()`
 sorted() không thay đổi list gốc và trả về list mới, còn .sort() thay đổi list gốc
-5. `join()`
+5. `.join()`
 - nối các phần tử thành 1 chuỗi
 ``` python
 a = ["hello", "world", "python"]
