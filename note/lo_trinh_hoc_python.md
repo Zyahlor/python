@@ -246,7 +246,7 @@ tuple("abc")       # ('a', 'b', 'c')
 
 ---
 
-# 5. Set
+# 5. [[set]]
 
 ```python
 a = {1, 2, 3}
@@ -259,11 +259,16 @@ Học:
 - Union
 - Intersection
 - Difference
+- Duyệt set =  for
+- Set comprehension
+- Chuyển đổi list <-> set
 
 ### Bài tập
 - Xóa phần tử trùng trong list
 - Tìm phần tử chung giữa hai list
 - Tìm phần tử chỉ xuất hiện ở một list
+- Kiểm tra phần tử tồn tại trong set
+- lọc dữ liệu trùng
 
 ---
 
