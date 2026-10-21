@@ -89,10 +89,10 @@ a[1:4:2]   # (20, 40) — từ 1 đến trước 4, step 2
 ```
 - **điểm quan trọng:**
 + slice luôn trả về tuple mới
-+ không lỗi khi out - of - range, tự căts vừa đủ
++ không lỗi khi out - of - range, tự cắtvừa đủ
 + số âm tính từ cuối lên
 ## unpacking
--  gán nhiều biến cùng lcus từ 1 tuple, list, string
+-  gán nhiều biến cùng lúc  từ 1 tuple, list, string
 ``` python
 a = (1,2,3)
 x,y,z =a # x=1,y=2,z=3
