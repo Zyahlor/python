@@ -272,7 +272,7 @@ Học:
 
 ---
 
-# 6. Dictionary ⭐⭐⭐
+# 6. [[Dictionary ]]⭐⭐⭐
 
 ```python
 user = {
