@@ -307,7 +307,7 @@ for key, value in user.items():
 
 ---
 
-# 7. Function ⭐⭐⭐
+# 7. [[Function]] ⭐⭐⭐
 
 ## Học
 - `def`
