@@ -29,7 +29,7 @@ print(new_ip)
 dem_open =0
 dem_closed = 0
 dem_filtered = 0
-dem_unknown = 0
+dem_unknow = 0
 for i in new_ip:
     if i[2] == 'open':
         if i[1] in risky:
@@ -42,6 +42,6 @@ for i in new_ip:
     elif i[2] == 'filtered':
         dem_filtered+=1
     else:
-        dem_unknown+=1
+        dem_unknow+=1
 print("==== tong ket ====")
 print(f"open:{dem_open} | closed:{dem_closed} | filtered:{dem_filtered} | unknow:{dem_unknown}")

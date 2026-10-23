@@ -336,7 +336,7 @@ Viết function:
 
 ---
 
-# 8. File I/O
+# 8. [[tương tác file]]
 
 ## Học
 - `open()`
@@ -721,7 +721,7 @@ Pentest Projects
 
 # 🧠 Mốc kiểm tra năng lực
 
-## Mốc 1
+## Mốc 1 
 Có thể tự viết chương trình bằng:
 - biến
 - if

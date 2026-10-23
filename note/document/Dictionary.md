@@ -126,3 +126,36 @@ for key in fruits:
 # xuất thôi
 print(count)
 ```
+
+## Thêm một dict vào dict khác
+
+Giả sử có dict rỗng:
+
+```
+stats = {}
+```
+
+Muốn thêm IP `192.168.1.10` cùng hai bộ đếm, viết:
+
+```python
+stats["192.168.1.10"] = { "success": 0,    "failed": 0}
+```
+
+Kết quả:
+
+```python 
+{
+"192.168.1.10": 
+{  
+      "success": 0,        
+      "failed": 0    
+}}
+```
+
+Cách hiểu:
+
+```
+dict_ben_ngoai[key] = dict_ben_trong
+```
+
+Bạn đang gán một dict làm value cho key của dict bên ngoài.
